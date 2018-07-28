@@ -47,7 +47,7 @@ Massive Disclaimer
 
 This is as quick 'n dirty as it can get.
 
-The api client library will easily bomb out at any the little
+The api client library will easily bomb out at any little
 random failures that the meetup API can have.
 
 Feel free to use/improve/further build upon, eg this could be extended
