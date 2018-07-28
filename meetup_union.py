@@ -61,7 +61,7 @@ def get_membership_state(urlnames, own_meetup, target_meetup):
     }.intersection(set(urlnames))
 
     if len(common_groups) == 0:
-        # Hmmm?
+        # These people probably have their groups set to private
         return None
 
     if len(common_groups) == 2:
@@ -85,7 +85,7 @@ def print_results(states, own_meetup, target_meetup):
           f"{state_counter[MEMBER_OF_TARGET]}")
     print(f"Members both: "
           f"{state_counter[MEMBER_OF_BOTH]}")
-    print(f"Members neither: "
+    print(f"Members of neither (private?): "
           f"{state_counter[None]}")
 
 
@@ -99,6 +99,7 @@ def parse_arguments():
                         type=int,
                         help="Numeric id found in the event's URL")
     return parser.parse_args()
+
 
 def main():
     options = parse_arguments()
