@@ -83,7 +83,7 @@ def print_results(states, own_meetup, target_meetup):
           f"{state_counter[MEMBER]}")
     print(f"Members of only {target_meetup}: "
           f"{state_counter[MEMBER_OF_TARGET]}")
-    print(f"Members both: "
+    print(f"Members of both: "
           f"{state_counter[MEMBER_OF_BOTH]}")
     print(f"Members of neither (private?): "
           f"{state_counter[None]}")
